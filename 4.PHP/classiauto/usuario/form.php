@@ -23,6 +23,29 @@
       <label class="form-label">Nome</label>
       <input type="text" name="nome" class="form-control"
         value="<?= @$_REQUEST['nome'] ?>">
+      
+      <label class="form-label">Telefone</label>
+      <input type="tel" name="telefone" class="form-control"
+        value="<?= @$_REQUEST['telefone'] ?>">
+      
+      <label class="form-label">Nascimento</label>
+      <input type="date" name="nascimento" class="form-control"
+        value="<?= @$_REQUEST['nascimento'] ?>">
+      
+      <label class="form-label">Cidade</label>
+      <input type="text" name="cidade" class="form-control"
+        value="<?= @$_REQUEST['cidade'] ?>">
+      
+      <label class="form-label">UF</label>
+      <select name="uf" class="form-select">
+        <option value="PR" <?= @$_REQUEST['uf'] == 'PR' ? 'selected' : '' ?>>PR</option>
+        <option value="SC" <?= @$_REQUEST['uf'] == 'SC' ? 'selected' : '' ?>>SC</option>
+        <option value="RS" <?= @$_REQUEST['uf'] == 'RS' ? 'selected' : '' ?>>RS</option>
+      </select>
+
+      <label class="form-label">Pais</label>
+      <input type="mail" name="pais" class="form-control"
+        value="<?= @$_REQUEST['pais'] ?>">
 
       <label class="form-label">E-mail</label>
       <input type="mail" name="email" class="form-control"
