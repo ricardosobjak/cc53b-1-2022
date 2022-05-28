@@ -19,7 +19,9 @@
     <?php endif;?>
 
 
-    <form action="cadastro.php" method="POST">
+    <form action="controller.php" method="POST">
+      <input type="hidden" name="action" value="salvar" />
+
       <label class="form-label">Nome</label>
       <input type="text" name="nome" class="form-control"
         value="<?= @$_REQUEST['nome'] ?>">
