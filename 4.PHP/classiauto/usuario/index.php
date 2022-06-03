@@ -24,6 +24,8 @@
   */
 
   $action = @$_REQUEST['action'];
+  // View padrão (listagem de usuários)
+  $view = "view/list.php";
 
   // Inserir ou atualizar o usuário no DB
   if($action == 'salvar') {
@@ -31,12 +33,12 @@
       echo "Usuário inserido com sucesso!";
     } else {
       $mensagem = "Falha ao salvar usuário";
-      include('form.php');
+      $view = 'view/form.php';
     }
   }
   else { // Quando outra action não for definida
     $result = $userDAO->getAll(); // Obter a lista de usuarios do DB
-    include('list.php'); // Abre a listagem de Usuários
   }
 
+  include '../template/index.php';
 ?>
